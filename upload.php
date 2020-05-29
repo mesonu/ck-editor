@@ -8,7 +8,7 @@
         $newImageNmae = rand(). '.'.$extension;
         chmod('upload',0777);
         $allowedExtension = array('jpg', 'jpeg', 'png','gif');
-        if (in_array(strtolower($extension), $allowedExtension)) :
+        // if (in_array(strtolower($extension), $allowedExtension)) :
             move_uploaded_file($file,'upload/'.$newImageNmae);
             $functionNumber = $_GET['CKEditorFuncNum'];
             $imgURL = 'upload/'.$newImageNmae;
@@ -19,6 +19,6 @@
             </script>";
             echo $script;
         
-        endif;
+        // endif;
     endif;
 ?>
